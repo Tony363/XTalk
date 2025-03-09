@@ -1,0 +1,316 @@
+@import "@/app/styles/function.scss";
+
+.headerWrap {
+  width: 100%;
+}
+
+.dark {
+  background-image: linear-gradient(180deg, #ffe566 0%, #ffd400 100%);
+}
+
+.light {
+  background-color: #fff;
+}
+
+.header {
+  position: relative;
+  min-width: 1136px;
+  max-width: 3840px;
+  height: 64px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  margin: 0 auto;
+  position: relative;
+
+  .nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .logoIcon {
+      //position: relative;
+    }
+
+    .tips {
+      font-size: 12px;
+      line-height: 1.1;
+      line-height: 16px;
+      font-weight: 500;
+      color: #141414;
+      font-family: 'Jost';
+    }
+
+    .dividing-line {
+      height: 24px;
+      width: 1px;
+      background-color: var(--black-141414);
+    }
+
+    .item {
+      margin-right: 20px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black-141414);
+    font-family: "Jost";
+    gap: 20px;
+
+    & a {
+      text-decoration: none;
+      color: var(--black-141414);
+    }
+
+    .link {
+      font-weight: 500;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+
+    .active {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+}
+
+.mobileHeaderNavButton {
+  width: pxTorem(48px);
+  height: pxTorem(48px);
+  margin-right: pxTorem(32px);
+
+  svg {
+    aspect-ratio: auto / auto;
+  }
+}
+
+.mobileHeaderNavPage {
+  font-family: 'Jost';
+  height: calc(100%);
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, #FFD400 0%, #FFE566 100%);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+
+  .mobileHeaderNavLogo {
+    margin: pxTorem(32px);
+  }
+
+  .mobileHeaderNavClose {
+    position: absolute;
+    top: pxTorem(24px);
+    right: pxTorem(32px);
+    width: pxTorem(48px);
+    height: pxTorem(48px);
+  }
+
+  .mobileHeaderNavigationBar .navigation {
+    margin-top: pxTorem(136px);
+    margin-left: pxTorem(64px);
+    font-size: pxTorem(96px);
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+  }
+
+  .avatar {
+    position: absolute;
+    width: pxTorem(64px);
+    height: pxTorem(64px);
+    right: pxTorem(32px);
+  }
+}
+
+.mobileHeader {
+  width: 100%;
+  height: pxTorem(96px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 pxTorem(32px);
+  background: linear-gradient(180deg, #ffd400 0%, #ffe566 100%);
+  justify-content: space-between;
+}
+
+.mobileHeaderNavLogo {
+  width: pxTorem(133px);
+  height: pxTorem(32px);
+  background: url(https://storage.googleapis.com/rpggo_images/campaign/logo.svg);
+  background-size: 100% 100%;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+
+  @media only screen and (max-width: 600px) {
+    gap: pxTorem(16px);
+  }
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+
+.userCard {
+  font-size: 12px;
+  padding: 10px 10px;
+  .user {
+    display: flex;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f7f7f7;
+  }
+  .info {
+    margin-left: 10px;
+  }
+  .logOutText {
+    text-align: center;
+    font-size: 12px;
+
+    // width: 128px;
+    line-height: 34px;
+    font-family: "Jost";
+    text-indent: 12px;
+    border-bottom: 1px solid #f7f7f7;
+    transition: 0.3s;
+    &:hover {
+      color: var(--yello-FFD400);
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 40px;
+  font-family: "Jost";
+  font-size: 14px;
+  color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.lang {
+  position: relative;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  height: 40px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-family: 'PingFang SC';
+  font-weight: 600;
+  font-size: 18px;
+  color: #1F1F1F;
+  border-radius: 86px;
+  padding-right: 24px;
+  padding-left: 6px;
+
+  @media only screen and (max-width: 600px) {
+    height: pxTorem(64px);
+    padding-right: pxTorem(40px);
+  }
+  img {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    @media only screen and (max-width: 600px) {
+      width: pxTorem(40px);
+      height: pxTorem(40px);
+      margin-right: pxTorem(8px);
+    }
+  }
+}
+.langItems {
+  .item {
+    display: flex;
+    align-items: center;
+    line-height: 38px;
+    gap: 8px;
+    cursor: pointer;
+    &.current {
+      color: #FFD400;
+      cursor: default;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      @media only screen and (max-width: 600px) {
+        width: pxTorem(40px);
+        height: pxTorem(40px);
+      }
+    }
+  }
+}
+
+
+.smaillSize {
+  margin-top: pxTorem(18px);
+  font-size: pxTorem(78px);
+}
+
+.JoinCommunity {
+  @media (max-width: 1300px) {
+    div {
+      padding: 0 8px;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+  background-image: url(https://storage.googleapis.com/rpggo_images/diago/assets/arrow.png);
+  @media only screen and (max-width: 600px) {
+    right: pxTorem(8px);
+    width: pxTorem(24px);
+    height: pxTorem(24px);
+  }
+}
+
+.arrow-down {
+  transform: scaleY(-1);
+}

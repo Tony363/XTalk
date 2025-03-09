@@ -1,0 +1,25 @@
+@import "@/app/styles/function.scss";
+
+.FrostedGlass {
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundColor {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.backgroundImage {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  filter: blur(40px);
+  background-position: center pxTorem(-80px);
+}

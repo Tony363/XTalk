@@ -1,0 +1,158 @@
+@import "@/app/styles/function.scss";
+
+.mask {
+  color: rgb(48, 48, 48);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 83vw;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Jost';
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .4);
+  flex-direction: column;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 28px;
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 384px;
+  height: 300px;
+
+  svg {
+    transform: scale(1.2);
+  }
+}
+
+.login {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  width: 384px;
+  padding: 32px;
+  padding-top: 48px;
+  @media only screen and (max-width: 600px) {
+    width: pxTorem(668px);
+    padding: pxTorem(64px);
+    padding-top: pxTorem(96px);
+  }
+}
+
+
+.close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
+  @media only screen and (max-width: 600px) {
+    width: pxTorem(32px);
+    height: pxTorem(32px);
+  }
+}
+
+
+.logo {
+  margin: 0 auto;
+  width: 172px;
+  height: 40px;
+  @media only screen and (max-width: 600px) {
+    width: pxTorem(344px);
+    height: pxTorem(80px);
+  }
+}
+
+.limited {
+  color: #ff4d4f;
+  margin: 24px 0;
+  color: #FF4D4F;
+  text-align: center;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn {
+  width: 100%;
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid #EBEBE8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  @media only screen and (max-width: 600px) {
+    font-size: pxTorem(32px);
+    width: 100%;
+    height: pxTorem(96px);
+  }
+  &.user {
+    cursor: default;
+    color: #525252;
+    background-color: #F5F5F5;
+    border: none;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+    margin-right: 8px;
+  }
+}
+
+.btn-signout {
+  width: 320px;
+  height: 24px;
+  margin: 16px auto;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #1f1f1f;
+  cursor: pointer;
+}
+
+.icon-google {
+  background-image: url(https://storage.googleapis.com/rpggo_images/creator-tool/icon_signin_google.svg);
+}
+
+.icon-discord {
+  background-image: url(https://storage.googleapis.com/rpggo_images/creator-tool/icon_signin_discord.svg);
+}
+
+.icon-phone {
+  background-image: url(https://storage.googleapis.com/rpggo_images/creator-tool/icon_signin_phone.svg);
+}
+
+.append {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  bottom: 24px;
+  color: #949494;
+  font-weight: 400;
+}

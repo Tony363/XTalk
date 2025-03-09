@@ -1,0 +1,126 @@
+@import "@/app/styles/function.scss";
+.wrapper {
+  width: 362px;
+  padding: 0 0 20px 0;
+  background: rgba(30.60, 30.60, 30.60, 0.32);
+  border-radius: 12px;
+  backdrop-filter: blur(80px);
+  color: var(--white);
+  margin-top: 20px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .header {
+    height: 48px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  .content {
+    padding: 20px 20px 0 20px;
+    font-size: 14px;
+    line-height: 20px;
+
+    .title {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .line {
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 20px 0;
+    }
+  }
+
+  .task {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    gap: 20px;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .conditions {
+    padding: 0 20px 0 20px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 17px;
+      margin-top: 12px;
+      font-size: 14px;
+      height: 24px;
+    }
+
+    .state {
+      color: var(--yello-FFD400);
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
+
+.mobile {
+  .wrapper {
+    width: auto;
+    margin: pxTorem(24px) pxTorem(32px) 0 pxTorem(32px);
+    padding: 0 0 pxTorem(32px) 0;
+    border-radius: pxTorem(24px);
+  }
+
+  .header {
+    height: pxTorem(94px);
+    padding: 0 pxTorem(32px);
+    font-size: pxTorem(32px);
+    line-height: pxTorem(48px);
+  }
+
+  .content {
+    padding: pxTorem(20px) pxTorem(32px) 0 pxTorem(32px);
+    font-size: pxTorem(28px);
+    line-height: pxTorem(42px);
+
+    .title {
+      margin-bottom: pxTorem(16px);
+    }
+
+    .line {
+      margin: pxTorem(32px) 0;
+    }
+  }
+
+  .task {
+    margin: pxTorem(32px) 0;
+    grid-template-columns: 1fr pxTorem(40px);
+    gap: pxTorem(40px);
+  }
+
+  .conditions {
+    padding: 0 pxTorem(32px) 0 pxTorem(32px);
+
+    .item {
+      gap: 17px;
+      margin-top: pxTorem(28px);
+      font-size: pxTorem(28px);
+      height: pxTorem(42px);
+    }
+
+    .state {
+      font-size: pxTorem(28px);
+    }
+  }
+}

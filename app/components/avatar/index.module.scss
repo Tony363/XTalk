@@ -1,0 +1,45 @@
+@import "@/app/styles/function.scss";
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffed00;
+  font-weight: 400;
+  overflow: hidden;
+  font-size: 14px;
+  img {
+    width: 100%;
+  }
+}
+
+// config
+
+// 推荐列表尺寸
+.PC24_M40 {
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+
+  @media only screen and (max-width: 600px) {
+    width: pxTorem(40px);
+    height: pxTorem(40px);
+    font-size:  pxTorem(24px);
+  }
+}
+
+
+// lobby 单角色尺寸
+.PC32_M47 {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  color: #fff;
+
+  @media only screen and (max-width: 600px) {
+    width: pxTorem(47px);
+    height: pxTorem(47px);
+    font-size:  pxTorem(22px);
+  }
+}

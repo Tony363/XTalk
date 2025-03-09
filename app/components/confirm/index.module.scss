@@ -1,0 +1,129 @@
+@import "@/app/styles/function.scss";
+
+.dialog-enter {
+  animation: fadeInScale .1s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog {
+  color: rgb(48, 48, 48);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 83vw;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Jost';
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+
+  background-color: rgba(0, 0, 0, .4);
+  @media only screen and (max-width: 600px) {
+    font-size: 28px;
+  }
+
+  &-content {
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    width: 488px;
+    height: 244px;
+
+    @media only screen and (max-width: 600px) {
+      width: pxTorem(616px);
+      height: pxTorem(408px);
+    }
+  }
+
+  &-title {
+    width: 260px;
+    margin-top: 32px;
+    height: 60px;
+
+    @media only screen and (max-width: 600px) {
+      width: pxTorem(552px);
+      font-size: pxTorem(32px);
+      margin-top: pxTorem(48px);
+    }
+  }
+  &-common {
+    height: 60px;
+    @media only screen and (max-width: 600px) {
+      height: 30px;
+    }
+  }
+
+  &-description {
+    margin-top: 8px;
+    width: 400px;
+    font-weight: 400;
+    font-size: 16px;
+
+    @media only screen and (max-width: 600px) {
+      width: pxTorem(552px);
+      margin-top: pxTorem(12px);
+    }
+  }
+
+  &-btnwrap {
+    position: absolute;
+    bottom: 32px;
+    display: flex;
+    gap: 12px;
+    font-size: 16px;
+
+    @media only screen and (max-width: 600px) {
+      gap: pxTorem(20px);
+      margin-top: pxTorem(12px);
+      height: pxTorem(88px);
+      bottom: pxTorem(32px);
+    }
+  }
+
+  &-btns {
+    width: 128px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+    border-radius: 4px;
+
+    @media only screen and (max-width: 600px) {
+      width: pxTorem(266px);
+      margin-top: pxTorem(12px);
+      height: pxTorem(88px);
+    }
+  }
+
+  &-cancel {
+    border: 1px solid #000;
+  }
+
+  &-confirm {
+    background-color: #FFD400;
+
+    svg {
+      circle {
+        fill: #1f1f1f;
+      }
+    }
+  }
+}
