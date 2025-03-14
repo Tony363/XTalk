@@ -1,4 +1,4 @@
-# RPGGO Game (Name is TBD)
+# Sing
 
 
 <div align="center">
@@ -29,65 +29,106 @@
   </a>
 </div>
 
-## 1. Introduction
+## 1. 📖Brief
 
-We introduce our first opensource frontend for anyone who wants to host his/her own AI game site. 
+We hear lots of requests from developers about how to build a AI game website like RPGGO, so we decide to open source a version of our frontend code. Of course this is not the latest version and we removed some functionalities which are not related to personal usage, but still, it is a great code example for those who want to have their own website.
 
-@demo video here
+Check out the tutorial video as below
+
+[![Setup a AI game site in 5 mins!](https://img.youtube.com/vi/_f0iuZsjHso/0.jpg)](https://www.youtube.com/watch?v=_f0iuZsjHso)
 
 
-
-## 2. Tech Details
+## 2. ⚙️Tech Details
 We wrote a full description of the architecture design. You can read details here: 
 
 @Add a link for document here
 
-## 3. Chat Website & API Platform
+## 3. 📢 Chat Website & API Platform
 You can experience the chat functionality in our official website: [www.rpggo.ai](https://www.rpggo.ai), and choose any game to play
 
 If you are interested in the API platform behinds this frontend codebase, you can visit RPGGO Platform: [developer.rpggo.ai](https://developer.rpggo.ai/)
 
 
-## 4. How to Run Locally
+## 4. ⚡️How to Run Locally
 
-### clone repo
+4.1 start to clone the repo code to your local dev box
 
-```git clone https://github.com/RPGGO-AI/singularity.git```
+```
+git clone https://github.com/RPGGO-AI/singularity.git
+```
 
-### install Volta
-```curl https://get.volta.sh | bash```
+4.2 install Volta, the javascript tool manager
+  
+```
+curl https://get.volta.sh | bash
+```
 
-### install Yarn
-```volta install yarn```
+> try to use "sudo curl https://get.volta.sh | bash" if not works in ubuntu
 
-### install dependencies
-```yarn install```
+4.3 install Node, Yarn
 
-### get your token
-Follow the instruction [How to Apply an API Key](https://github.com/RPGGO-AI/stardewAIRPG/wiki/How-to-get-an-API-Key) to get your api key.
+```
+volta install node
 
-### config env
-```cp .env.example .env.local```
-paste your token to .env.local
+volta install yarn
+```
 
-### dev
-```yarn dev```
+4.4 install all dependencies
 
-### visit
-```http://localhost:3000/game/d6d9cf32-4a4e-404a-9c77-b4f5c75c39cf```
+```
+yarn install
+```
 
-## 7. License
+
+4.5 get your token
+
+Follow the instruction [How to Apply an API Key](https://developer.rpggo.ai/dev-docs/support/apply-your-test-key) to get your api key.
+
+4.6 clone a config env. Note you should use environment variables if you try to deploy it in any cloud hosting platform
+
+```
+cp .env.template .env.local
+```
+
+And paste your previous api token to .env.local. But remove the "Bearer"! It should looks like 
+> GAME_API_BEARER_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.J9EIQfKX-3VZh
+
+
+4.7 run the code in dev
+
+```
+yarn dev
+```
+
+Here you go! You get your site fly. Copy below link to your browser and start from a quick test
+
+```
+http://localhost:3000/game/d6d9cf32-4a4e-404a-9c77-b4f5c75c39cf
+```
+
+Note, you can test more games as long as you have valid game ids. A bunch of games are available in RPGGO game lobby(https://www.rpggo.ai/). You can pick up from there.
+
+## 7. ⚖️License
 This code repository and the model weights are licensed under the [MIT License](https://).
 
 We give you the freedom and hope you can make it better and better.
 
 
-## 8. Future Works
+## 8. 👨‍💻‍Contributors
+
+<a href="https://github.com/RPGGO-AI/singularity/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=RPGGO-AI/singularity" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+<br>
+
+## 9. 🆘Future Works
 
 We look forward to the community iteration on this code base. There are some directions worth for exploring:
 - UI/UX - how to make the UI/UX configurable
 
 
-
-## 9. Contact
+## 9. 📧Contact
 If you have any questions, please raise an issue or contact us at [dev@rpggo.ai](dev@rpggo.ai).
