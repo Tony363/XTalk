@@ -1,4 +1,4 @@
-# Sing
+# X-Talk
 
 
 <div align="center">
@@ -32,6 +32,8 @@
 ## 1. 📖Brief
 
 We hear lots of requests from developers about how to build a AI game website like RPGGO, so we decide to open source a version of our frontend code. Of course this is not the latest version and we removed some functionalities which are not related to personal usage, but still, it is a great code example for those who want to have their own website.
+
+We named this open source project as X-Talk, as to represent AI-driven, interactive, and dynamic conversations. The "X" symbolizes infinite possibilities, cross-domain communication, and next-gen AI dialogue systems, making it a strong fit for an AI-powered game interaction framework.
 
 Check out the tutorial video as below
 
