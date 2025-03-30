@@ -41,9 +41,13 @@ Check out the tutorial video as below
 
 
 ## 2. ⚙️Tech Details
-We wrote a full description of the architecture design. You can read details here: 
 
-@Add a link for document here
+We reimagined what an AI RPG could be by turning ChatGPT-Next-Web into a dynamic, multi-agent game engine.  
+Learn how we added support for multiple AI bots, stateful game sessions, and interactive story progression—all in the browser.
+
+📖Read the full technical breakdown → [Building a Web-Based Multi-Bot RPG with LLMs: The Frontend Behind RPGGO](./doc/Tech_Debrief.md)  
+
+
 
 ## 3. 📢 Chat Website & API Platform
 You can experience the chat functionality in our official website: [www.rpggo.ai](https://www.rpggo.ai), and choose any game to play
